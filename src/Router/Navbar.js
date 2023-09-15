@@ -1,42 +1,31 @@
 import React from 'react'
 import { Link,Outlet } from 'react-router-dom'
-import { useState } from 'react'
 import './Navbar.css'
-import Main from '../Components/MainCompo/Main'
-
 
 const Navbar = () => {
 
 
-    const [show,setShow]=useState(false);
+
   return (
     <>
     <div className='Navbar m-3 '>
-        <div className="wrapper p-2 ">
-            <div className='w-20'>
-                <h4>Logo</h4>
+        <div className="wrapper p-2 m-2 ">
+            <div className='w-25 row align-items-center'>
+                <h4 className='col-6'>Udaan.Com</h4>
+                <img className=' col-4 w-25' src="https://i.pinimg.com/originals/bd/ba/9b/bdba9b09e40bc2eb4281078049263d08.gif" alt="" />
             </div>
         <ul className='nav nav-ul'>
-            <li className='nav-city-li nav-item  shadow-sm' >
-                <Link className='nav-link text-dark' to="/pune" >Pune</Link>
-            </li>
             <li className='nav-city-li nav-item  shadow-sm' >
                 <Link className='nav-link text-dark' to="/main" >Home</Link>
             </li>
             <li className='nav-city-li nav-item shadow-sm'  >
-                <Link className='nav-link text-dark' to='/mumbai' >Mumbai</Link>
+                <Link className='nav-link text-dark' to='/conformDetailsform' >Confirm Booking</Link>
             </li>
             <li className='nav-city-li nav-item shadow-sm' >
-                <Link className='nav-link text-dark' to='/hydrabad'>Hydrabad</Link>
+                <Link className='nav-link text-dark' to='/contact'>Contact Us</Link>
             </li>
             <li className='nav-city-li nav-item shadow-sm' >
-                <Link className='nav-link text-dark' to='/delhi' >Delhi</Link>
-            </li>
-            <li className='nav-city-li nav-item shadow-sm' >
-                <Link className='nav-link text-dark' to='/Nagpur' >Nagpur</Link>
-            </li>
-            <li className='nav-city-li nav-item shadow-sm' >
-                <Link className='nav-link text-dark' to='/Chennai' >Chennai</Link>
+                <Link className='nav-link text-dark' to='/about' >AboutUs</Link>
             </li>
         </ul>
                 <div className="SignUp btn btn-primary ">
@@ -45,7 +34,7 @@ const Navbar = () => {
             </div>
         </div>
             <div>
-                <Main show={show} setShow={setShow} />
+                {/* <Main show={show} setShow={setShow} /> */}
             </div>
         <Outlet/>
     </>

@@ -5,6 +5,7 @@ import DatePicker from './DatePicker';
 
 const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityIdSelected,show,setShow}) => {
   const [isSubmited, setIsSubmited] = useState(false);
+  const [Date,setDate]=useState();
 
 
 
@@ -14,6 +15,11 @@ const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityI
   const handleSubmit = (e) => {
     e.preventDefault()
     setIsSubmited(!isSubmited)
+  }
+
+  const handleDate =(e)=>{
+    setDate(e.target.value)
+    console.log(Date)
   }
 
   const handleFromCityChange = (e) => {
@@ -49,7 +55,8 @@ const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityI
               </div>
             </div>
             <div >
-              <DatePicker />
+              {/* <DatePicker /> */}
+              <input className='p-3 dropdown_menu' type="date"  onChange={handleDate} />
             </div>
             <div className="ClassType">
               <select className='dropdown_menu' >
