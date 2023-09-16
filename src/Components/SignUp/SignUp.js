@@ -2,7 +2,6 @@ import React from 'react'
 import { useState } from 'react'
 import './SignUp.css'
 import { useNavigate } from 'react-router-dom'
-import Airplane from '../../Images/png.png'
 
 const SignUp = () => {
 
@@ -30,7 +29,7 @@ const SignUp = () => {
   return (
     <div className='m-5'>
       <form onSubmit={handleSubmit} >
-        <div className="SignUpwrapper d-flex justify-content-center alighn-item-center">
+        <div className="SignUpwrapper d-flex justify-content-center alighn-item-center shadow-sm">
         <div className="left bg-primary d-flex align-item-center justify-content-center ">
           <img className='img-fluid w-100'  src='https://i.pinimg.com/originals/3f/00/4f/3f004fbd0825ffbd4b9b11656a38f451.gif'
           alt="Airplane" />

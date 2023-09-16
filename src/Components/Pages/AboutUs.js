@@ -8,7 +8,7 @@ const About = () => {
       const employesList = Employes.map(e=><EmployeCard name={e.name} about={e.about} />)
   return (
     <>
-    <div className='card m-5 bg-primary text-light shadow'>
+    <div className='card m-5 bg-primary text-light shadow-sm'>
       <div className="card-title m-3">
         <h4>About Udaan.com</h4>
       </div>

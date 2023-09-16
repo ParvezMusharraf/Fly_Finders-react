@@ -1,3 +1,8 @@
+import Emirates from '../Images/Emirateslogo.png'
+import IndiGo from '../Images/indigoLogo.png'
+import United from '../Images/UnitedLogo.png'
+import Delta from '../Images/deltaLogo.webp'
+
 const FlightRoutesDetails = [
     {
         id: 1,
@@ -8,6 +13,7 @@ const FlightRoutesDetails = [
         hours: "2h_10m",
         Price: 5100,
         Airline: "IndiGo",
+        AirlineLogoPng:IndiGo
     },
     {
         id: 2,
@@ -17,7 +23,8 @@ const FlightRoutesDetails = [
         To: '23:25m',
         hours: "2h_00m",
         Price: 6200,
-        Airline: "Delta Air Lines"
+        Airline: "Delta Air Lines",
+        AirlineLogoPng:Delta
     },
     {
         id: 3,
@@ -27,7 +34,8 @@ const FlightRoutesDetails = [
         To: '02:5m',
         hours: "2h_30m",
         Price: 3100,
-        Airline: "IndiGo"
+        Airline: "IndiGo",
+        AirlineLogoPng:IndiGo
     },
     {
         id: 4,
@@ -37,7 +45,8 @@ const FlightRoutesDetails = [
         To: '01:25m',
         hours: "1h_45m",
         Price: 7100,
-        Airline: "Emirates"
+        Airline: "Emirates",
+        AirlineLogoPng:Emirates
     },
     {
         id: 5,
@@ -47,7 +56,8 @@ const FlightRoutesDetails = [
         To: '01:25m',
         hours: "1h_55m",
         Price: 4100,
-        Airline: "United Airlines"
+        Airline: "United Airlines",
+        AirlineLogoPng:United
     },
     {
         id:6,
@@ -57,7 +67,54 @@ const FlightRoutesDetails = [
         To: '01:25m',
         hours: "1h_55m",
         Price: 5000,
-        Airline: "Indigo"
-    }
+        Airline: "Indigo Airline",
+        AirlineLogoPng:IndiGo
+    },
+
+        //From Puna TO All others 
+    {
+        id:7,
+        FromCityFlightId: 2,
+        ToCityFlightId: 1,
+        At: '23:10m',
+        To: '01:25m',
+        hours: "1h_55m",
+        Price: 5000,
+        Airline: "Indigo Airline",
+        AirlineLogoPng:IndiGo
+    },
+    {
+        id: 8,
+        FromCityFlightId: 2,
+        ToCityFlightId: 1,
+        At: '23:40m',
+        To: '02:5m',
+        hours: "2h_30m",
+        Price: 3100,
+        Airline: "IndiGo",
+        AirlineLogoPng:IndiGo
+    },
+    {
+        id: 9,
+        FromCityFlightId: 2,
+        ToCityFlightId: 1,
+        At: '23:40m',
+        To: '02:5m',
+        hours: "2h_30m",
+        Price: 3100,
+        Airline: "IndiGo",
+        AirlineLogoPng:IndiGo
+    },
+    {
+        id: 10,
+        FromCityFlightId: 2,
+        ToCityFlightId: 1,
+        At: '23:40m',
+        To: '02:5m',
+        hours: "2h_30m",
+        Price: 3100,
+        Airline: "IndiGo",
+        AirlineLogoPng:IndiGo
+    },
 ]
 export default FlightRoutesDetails;
