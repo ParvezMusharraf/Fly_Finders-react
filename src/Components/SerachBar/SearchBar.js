@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 import './SearchBar.css'
 import FlightCityData from '../../flight_Data/flightData'
-import DatePicker from './DatePicker';
 
 const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityIdSelected,show,setShow}) => {
   const [isSubmited, setIsSubmited] = useState(false);
@@ -9,8 +8,8 @@ const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityI
 
 
 
-    
-    const citiesOptionList = FlightCityData.map(ct => <option key={ct.id} value={ct.city} >{ct.city}</option>)
+    const citiesOptionList = FlightCityData.map(ct => <option key={ct.id} value={ct.id} >{ct.city}</option>)
+    const ToCitiesOptionList = FlightCityData.map(tct=><option key={tct.id} value={tct.id} >{tct.city}</option>)
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -43,23 +42,23 @@ const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityI
           <div className="mainSection">
             <div className="upper">
               <div className="from-dropdown m-3 ">
-                <select className='dropdown_menu' value={cityIdSelected} onChange={handleFromCityChange} >
+                <select className='dropdown_menu bg-light ' value={cityIdSelected} onChange={handleFromCityChange} >
                   {citiesOptionList}
                 </select>
               </div>
               <h4>To</h4>
               <div className="to-dropdown m-3">
-                <select className='dropdown_menu' value={toCityIdSelected} onChange={handleToCityChange} >
-                  {citiesOptionList}
+                <select className='dropdown_menu bg-light' value={toCityIdSelected} onChange={handleToCityChange} >
+                  {ToCitiesOptionList}
                 </select>
               </div>
             </div>
             <div >
               {/* <DatePicker /> */}
-              <input className='p-3 dropdown_menu' type="date"  onChange={handleDate} />
+              <input className='p-3 dropdown_menu bg-light' type="date"  onChange={handleDate} />
             </div>
             <div className="ClassType">
-              <select className='dropdown_menu' >
+              <select className='dropdown_menu bg-light' >
                 <option className='dropdown_item' value="Economy">Economy Class</option>
                 <option className='dropdown_item' value="First">First Class</option>
                 <option className='dropdown_item' value="Bussiness">Bussiness Class</option>

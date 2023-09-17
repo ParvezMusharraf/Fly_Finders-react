@@ -1,0 +1,30 @@
+.footer{
+    height: auto;
+}
+
+.heading{
+    color:orange;
+}
+
+.footercard{
+    align-items: center;
+    padding: auto;
+    text-align: center;
+}
+.nav-ulf{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+}
+.SocialUi{
+    align-items:center ;
+    text-align: center;
+    margin-right: 20px;
+}
+.SocialLogo{
+    font-size: 30px;
+}
+.SocialLogo:hover{
+    color: orange;
+}

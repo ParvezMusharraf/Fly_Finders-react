@@ -6,7 +6,7 @@ import Delta from '../Images/deltaLogo.webp'
 const FlightRoutesDetails = [
     {
         id: 1,
-        FromCityFlightId: 1,
+        FromCityFlightId: 1,    
         ToCityFlightId: 2,
         At: '23:10m',
         To: '01:25m',
@@ -109,6 +109,57 @@ const FlightRoutesDetails = [
         id: 10,
         FromCityFlightId: 2,
         ToCityFlightId: 1,
+        At: '23:40m',
+        To: '02:5m',
+        hours: "2h_30m",
+        Price: 3100,
+        Airline: "IndiGo",
+        AirlineLogoPng:IndiGo
+    },
+    {
+        id: 11,
+        FromCityFlightId: 2,
+        ToCityFlightId: 1,
+        At: '23:40m',
+        To: '02:5m',
+        hours: "2h_30m",
+        Price: 3100,
+        Airline: "IndiGo",
+        AirlineLogoPng:IndiGo
+    },
+    {
+        id: 12,
+        citysRoyes:[{
+            FromCityFlightId: 2,
+            ToCityFlightId: 1,
+        }
+        ],
+        At: '23:40m',
+        To: '02:5m',
+        hours: "2h_30m",
+        Price: 3100,
+        Airline: "IndiGo",
+        AirlineLogoPng:IndiGo
+    },
+    {
+        id: 13,
+        citysRoyes:{
+            FromCityFlightId: 2,
+            ToCityFlightId: 1,
+        },
+        At: '23:40m',
+        To: '02:5m',
+        hours: "2h_30m",
+        Price: 3100,
+        Airline: "IndiGo",
+        AirlineLogoPng:IndiGo
+    },
+    {
+        id: 14,
+        citysRoyes:{
+            FromCityFlightId: 2,
+            ToCityFlightId: 1,
+        },
         At: '23:40m',
         To: '02:5m',
         hours: "2h_30m",

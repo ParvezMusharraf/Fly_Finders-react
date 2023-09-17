@@ -1,8 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
 
-const ConformBookingForm = () => {
 
+const ConformBookingForm = () => {
+    
+    const [isSubmiited, setisSubmiited] = useState(false)
     const [User,setUser]=useState({
         emailId:'',
         mobileNo:'',
@@ -12,7 +14,6 @@ const ConformBookingForm = () => {
         child:""
     })
 
-    const [isSubmiited, setisSubmiited] = useState(false)
 
     const handleEmailChange =(e)=>{
         setUser({...User,emailId:e.target.value})
@@ -45,15 +46,15 @@ const ConformBookingForm = () => {
     const handleSubmit = (e) =>{
         e.preventDefault()
         setisSubmiited(true)
-        alert(`Form Submmited ${User}`)
+        alert('Form Submmited')
     }
 
     return (
         <div>
             <form onSubmit={handleSubmit}>
-                <div className='BookingForm card p-5' >
+                <div className='BookingForm card p-5 ' >
                 <div className='Contact_information row justify-content-center' >
-                    <h4 className='m-3 text-center' >Contact Information</h4>
+                    <h4 className='m-3 text-center text-warning' >Contact Information</h4>
                     <label className='col-5' >EmailId:
                         <input type="Email" className='form-control' required value={User.emailId} onChange={handleEmailChange} />
                     </label>
@@ -62,7 +63,7 @@ const ConformBookingForm = () => {
                     </label>
                 </div>
                 <div className='traveler_information row justify-content-center' >
-                    <h4 className='m-3 text-center' >Travelars Information</h4>
+                    <h4 className='m-3 text-center text-warning' >Travelars Information</h4>
                     <label  className='col-5'>Adult
                         <select className='form-control' value={User.Adult} onChange={handleAdult} >
                         <option value="1" >1</option>
@@ -87,10 +88,16 @@ const ConformBookingForm = () => {
                 </div>
                 <div className="buttons m-3 d-flex justify-content-center ">
                     <button className='btn btn-primary m-2 p-2 ' type='submit' >Confirm Ticket</button>
-                    <button className='btn btn-outline-primary m-2 p-2' >Reset</button>
+                    <button className='btn btn-outline-warning m-2 p-2' >Reset</button>
                 </div>
                 </div>
             </form>
+            {
+                    isSubmiited &&
+            <div>
+                <h2>Ticket Confirm</h2>
+            </div>
+            }
         </div>
     )
 }

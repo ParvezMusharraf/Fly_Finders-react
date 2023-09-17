@@ -14,7 +14,7 @@ const NavRouter = () => {
     <BrowserRouter>
         <Routes>
           <Route path='/' element={<Navbar/>} >
-          <Route path= '/main' element={<Main/>}/>
+          <Route path= '/' element={<Main/>}/>
           <Route path='/conformDetailsform' element={<ConformBookingForm/>} />
           <Route path='/about' element={<Delhi/>} />
           <Route path='/contact' element={<Hydrabad/>} />
