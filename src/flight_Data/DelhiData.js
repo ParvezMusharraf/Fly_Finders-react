@@ -71,16 +71,16 @@ const FlightRoutesDetails = [
         AirlineLogoPng:IndiGo
     },
 
-        //From Puna TO All others 
+        //From Mumbai TO pune   
     {
         id:7,
         FromCityFlightId: 2,
         ToCityFlightId: 1,
-        At: '23:10m',
-        To: '01:25m',
-        hours: "1h_55m",
-        Price: 5000,
-        Airline: "Indigo Airline",
+        At:'23:10m',
+        To:'01:25m',
+        hours:"1h_55m",
+        Price:5000,
+        Airline:"Indigo Airline",
         AirlineLogoPng:IndiGo
     },
     {
@@ -90,20 +90,20 @@ const FlightRoutesDetails = [
         At: '23:40m',
         To: '02:5m',
         hours: "2h_30m",
-        Price: 3100,
-        Airline: "IndiGo",
+        Price: 4100,
+        Airline:"United Airlines",
         AirlineLogoPng:IndiGo
     },
     {
         id: 9,
         FromCityFlightId: 2,
         ToCityFlightId: 1,
-        At: '23:40m',
-        To: '02:5m',
-        hours: "2h_30m",
-        Price: 3100,
-        Airline: "IndiGo",
-        AirlineLogoPng:IndiGo
+        At: '23:00m',
+        To: '01:25m',
+        hours: "1h_45m",
+        Price: 7100,
+        Airline: "Emirates",
+        AirlineLogoPng:Emirates
     },
     {
         id: 10,
@@ -112,9 +112,9 @@ const FlightRoutesDetails = [
         At: '23:40m',
         To: '02:5m',
         hours: "2h_30m",
-        Price: 3100,
-        Airline: "IndiGo",
-        AirlineLogoPng:IndiGo
+        Price: 4100,
+        Airline: "United Airlines",
+        AirlineLogoPng:United
     },
     {
         id: 11,
@@ -124,48 +124,99 @@ const FlightRoutesDetails = [
         To: '02:5m',
         hours: "2h_30m",
         Price: 3100,
-        Airline: "IndiGo",
+        Airline:"IndiGo",
         AirlineLogoPng:IndiGo
     },
     {
         id: 12,
-        citysRoyes:[{
-            FromCityFlightId: 2,
-            ToCityFlightId: 1,
-        }
-        ],
-        At: '23:40m',
-        To: '02:5m',
-        hours: "2h_30m",
-        Price: 3100,
-        Airline: "IndiGo",
-        AirlineLogoPng:IndiGo
+        FromCityFlightId: 2,
+        ToCityFlightId: 1,
+        At: '23:00m',
+        To: '01:25m',
+        hours: "1h_45m",
+        Price: 7100,
+        Airline:"Emirates",
+        AirlineLogoPng:Emirates
     },
     {
         id: 13,
-        citysRoyes:{
-            FromCityFlightId: 2,
-            ToCityFlightId: 1,
-        },
+        FromCityFlightId: 2,
+        ToCityFlightId: 1,
+        At: '23:40m',
+        To: '02:5m',
+        hours: "2h_30m",
+        Price: 4100,
+        Airline:"United Airlines",
+        AirlineLogoPng:United
+    },
+    {
+        id: 14,        
+        FromCityFlightId: 2,
+        ToCityFlightId: 1,
         At: '23:40m',
         To: '02:5m',
         hours: "2h_30m",
         Price: 3100,
-        Airline: "IndiGo",
+        Airline:"IndiGo",
+        AirlineLogoPng:IndiGo
+    },
+
+    // Mumbai to Hydrabad
+
+    {
+        id: 15,        
+        FromCityFlightId: 2,
+        ToCityFlightId: 3,
+        At: '23:40m',
+        To: '02:5m',
+        hours: "2h_30m",
+        Price: 3100,
+        Airline:"IndiGo",
         AirlineLogoPng:IndiGo
     },
     {
-        id: 14,
-        citysRoyes:{
-            FromCityFlightId: 2,
-            ToCityFlightId: 1,
-        },
+        id: 16,        
+        FromCityFlightId: 2,
+        ToCityFlightId: 3,
         At: '23:40m',
-        To: '02:5m',
+        To: '02:55',
+        hours: "2h_30m",
+        Price: 4100,
+        Airline:"United Airlines",
+        AirlineLogoPng:United
+    },
+    {
+        id: 18,        
+        FromCityFlightId: 2,
+        ToCityFlightId: 3,
+        At: '23:40m',
+        To: '02:55',
         hours: "2h_30m",
         Price: 3100,
-        Airline: "IndiGo",
+        Airline:"IndiGo",
         AirlineLogoPng:IndiGo
+    },
+    {
+        id: 17,        
+        FromCityFlightId: 2,
+        ToCityFlightId: 3,
+        At: '23:40m',
+        To: '02:55',
+        hours: "2h_30m",
+        Price: 6200,
+        Airline: "Delta Air Lines",
+        AirlineLogoPng:Delta
+    },
+    {
+        id: 18,        
+        FromCityFlightId: 2,
+        ToCityFlightId: 3,
+        At: '23:40m',
+        To: '02:55',
+        hours: "2h_30m",
+        Price: 6200,
+        Airline: "Delta Air Lines",
+        AirlineLogoPng:Delta
     },
 ]
 export default FlightRoutesDetails;

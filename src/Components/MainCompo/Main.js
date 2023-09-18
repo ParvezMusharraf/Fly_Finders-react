@@ -26,7 +26,6 @@ const Main = () => {
             {/* {DelhiOptionList} */}
         </div>
         }
-        <Crausel/>
         <FaQs/>
     </div>
   )

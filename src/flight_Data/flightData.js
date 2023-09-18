@@ -1,7 +1,8 @@
 const FlightCityData = [
     {
     id:1,
-    city:"Pune"
+    city:"Pune",
+    img:"",
     },
     {
     id:2,

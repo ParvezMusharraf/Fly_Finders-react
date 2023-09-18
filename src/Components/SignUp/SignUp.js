@@ -23,7 +23,7 @@ const SignUp = () => {
       setUserNo({MobileNo:e.target.value})
     }
     const handleNavigate = ()=>{
-      navigate('/main')
+      navigate('/')
     }
 
   return (
