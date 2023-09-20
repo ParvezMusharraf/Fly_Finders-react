@@ -2,9 +2,8 @@ import React, { useState } from 'react'
 import './SearchBar.css'
 import FlightCityData from '../../flight_Data/flightData'
 
-const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityIdSelected,show,setShow}) => {
+const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityIdSelected,show,setShow,date,setDate}) => {
   const [isSubmited, setIsSubmited] = useState(false);
-  const [Date,setDate]=useState();
 
 
 
@@ -16,9 +15,10 @@ const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityI
     setIsSubmited(!isSubmited)
   }
 
+
   const handleDate =(e)=>{
     setDate(e.target.value)
-    console.log(Date)
+    console.log(date)
   }
 
   const handleFromCityChange = (e) => {
@@ -55,7 +55,7 @@ const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityI
             </div>
             <div >
               {/* <DatePicker /> */}
-              <input className='p-3 dropdown_menu bg-light' type="date"  onChange={handleDate} />
+              <input className='p-3 dropdown_menu bg-light' value={date} type="date"  onChange={handleDate} />
             </div>
             <div className="ClassType">
               <select className='dropdown_menu bg-light' >

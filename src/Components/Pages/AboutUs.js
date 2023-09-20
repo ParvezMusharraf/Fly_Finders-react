@@ -11,8 +11,8 @@ const About = () => {
     <>
       <div className="row">
         <div className="col-5 p-5 bg-light">
-        <h1 className='m-5 p-4'>Life is Short And The World is Wide!</h1>
-        <h5  className=" mx-5 px-4" >Lets Take You With us to explore the world</h5>
+        <h1 className='m-3 p-4'>Life is Short And The World is Wide!</h1>
+        <h5  className=" mx-3 px-3" >Lets Take You With us to explore the world</h5>
         </div>
         <div className="col-7 col-img d-flex align-items-center justify-content-center">
           <h3 className='btn bg-white' onClick={()=> navigate('/') } >Book Now</h3>

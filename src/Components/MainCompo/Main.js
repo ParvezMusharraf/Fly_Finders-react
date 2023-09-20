@@ -4,28 +4,38 @@ import React from 'react'
 import FaQs from "./Faqs/FaQs";
 import FlightBookingCardList from "../FlightBookingCard/FlightBookingCardList";
 import Crausel from "../Crausel/Crausel";
+import FlightCityData from "../../flight_Data/flightData";
 
 const Main = () => {
 
   const [cityIdSelected, setcityIdSelected] = useState();
   const [toCityIdSelected, settoCityIdSelected] = useState();
+  const [date,setDate]=useState('You Have not selected Date')
   const [show,setShow]=useState(false);
 
-    // const DelhiOptionList = FlightRoutesDetails.map(d=><FlightBookingCard
-    //     id={d.id} At={d.At} To={d.To} hours={d.hours} Airline={d.Airline} Price={d.Price} cityIdSelected={cityIdSelected}
-    //     toCityIdSelected={toCityIdSelected} />)
+  const citieiesFrom = FlightCityData.find(c=>c.id == cityIdSelected)
+  const citieiesTo=FlightCityData.find(c=>c.id==toCityIdSelected)
+
   return (
-    <div>
+    <div className=" justify-content-center align-items-center ">
       <SearchBar cityIdSelected={cityIdSelected}  setcityIdSelected={setcityIdSelected}
             toCityIdSelected={toCityIdSelected} settoCityIdSelected={settoCityIdSelected}
+            date={date} setDate={setDate}
                     show={show} setShow={setShow} />
 
         {show && <div className="container h-100 mt-5" >
-            <h4 className="d-flex justify-content-center align-item-center">Search Results </h4>
+            <h4 className="d-flex justify-content-center align-item-center">Search Results for {citieiesFrom.city} to {citieiesTo.city} <br/></h4>
+            <span>Date: {date} </span>
             <FlightBookingCardList toCityIdSelected={toCityIdSelected} cityIdSelected={cityIdSelected} />
             {/* {DelhiOptionList} */}
         </div>
         }
+        <div className='container' style={{ 
+          width:'80vw',
+          height:"400px",
+        }} >
+        <Crausel/>
+        </div>
         <FaQs/>
     </div>
   )
