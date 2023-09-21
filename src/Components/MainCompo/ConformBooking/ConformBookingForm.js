@@ -101,9 +101,6 @@ const ConformBookingForm = () => {
                     <button className='btn btn-outline-warning m-2 p-2' >Reset</button>
                 </div>
                 </div>
-                <div className="leftimg col-5">
-
-                </div>
             </form>
             
             <div className='Container ticket rounded m-5 bg-light border shadow-sm p-2' >
