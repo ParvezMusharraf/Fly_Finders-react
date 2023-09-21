@@ -1,5 +1,9 @@
 import React from 'react'
 import { useState } from 'react'
+import {FcApproval, FcBusiness, FcBusinessman, FcPrint} from 'react-icons/fc'
+import {AiFillCalendar,} from 'react-icons/ai'
+import { GiAirplaneDeparture, GiConfirmed, } from 'react-icons/gi'
+import {FaChild} from 'react-icons/fa'
 
 
 const ConformBookingForm = () => {
@@ -92,12 +96,46 @@ const ConformBookingForm = () => {
                 </div>
                 </div>
             </form>
-            {
-                    isSubmiited &&
-            <div>
-                <h2>Ticket Confirm</h2>
+            
+            <div className='Container ticket rounded m-5 bg-light border shadow-sm p-2' >
+                <div className="ticket_wrapper m-2">
+                    <h4>Congratulations</h4>
+                    <h2>Your Ticket Is confirmed {<FcApproval/>}</h2>
+                    <span className='m-2 ' >your reservation for delhi - pune flight on 11 nov at 10:45 hourse is confirmed </span>
+                </div>
+                <div className="container_wrapper my-4 shadow-sm rounded container p-3 card">
+                <div className="names mx-4">
+                        Name:Parvez Musharraf
+                    </div>
+                    <div className="citys row m-3 ">
+                        <h3 className='col-2' >Delhi</h3>
+                        <h3 className='col-1' > To </h3> 
+                        <h3 className='col' >Pune</h3>
+                    </div>
+                    <div className="details row m-3 ">
+                        <span className='col-2' >{<GiAirplaneDeparture/>} One Way</span>
+                        <span className='col-2' >{<AiFillCalendar/>} 11 Nove</span>
+                        <span className='col-2' > {<FaChild/>}Child:1</span>
+                        <span className='col-2' >{<FcBusinessman/>} Adult:1</span>
+                    </div>
+                    <div className="bookingStatus row my-3">
+                        <div className="ref col-4 mx-3 ">
+                            <span> PNR Booking refrence </span>
+                            <h3>ASDFWDF43</h3>
+                        </div>
+                        <div className="pym col-4 mx-3 ">
+                            <span>Payment Status</span>
+                            <h3>Complete</h3>
+                        </div>
+                    </div>
+                    <div className="icon-wrapper w-100">
+                        <div className='btn btn-light' ><li style={{listStyle:'none',
+                        float:'right',
+                    fontSize:'40px',
+                    }} >{<FcPrint/>}</li></div>
+                    </div>
+                </div>
             </div>
-            }
         </div>
     )
 }
