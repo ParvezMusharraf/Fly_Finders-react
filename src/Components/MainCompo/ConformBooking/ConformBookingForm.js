@@ -5,6 +5,7 @@ import {AiFillCalendar,} from 'react-icons/ai'
 import { GiAirplaneDeparture, } from 'react-icons/gi'
 import {FaChild} from 'react-icons/fa'
 import './ConformBooking.css'
+import ticket from '../../../Images/—Pngtree—ticket online booking for trip_6822189.png'
 
 
 const ConformBookingForm = () => {
@@ -48,33 +49,43 @@ const ConformBookingForm = () => {
         console.log(User)
     }
 
+    const handleReset =(e)=>{
+        setUser({...User, emailId:'',
+        mobileNo:'',
+        FirstName:'',
+        LastName:"",
+        Adult:'',
+        child:""})
+    }
+
     const handleSubmit = (e) =>{
         e.preventDefault()
         setisSubmiited(true)
-        alert('Form Submmited')
+        alert('Ticket Confirmed Printed below form')
     }
 
     return (
         <div>
-            <form onSubmit={handleSubmit} className='row card' >
-                <div className='BookingForm-right  p-5 col-7' >
+            <div className=" card  w-100 container form-container  row">
+            <form onSubmit={handleSubmit} className='left-form ' >
+                <div className='p-2' >
                 <div className='Contact_information' style={{
                     display:'flex',
-                    justifyContent:'start',
-                    alignContent:'start',
+                    justifyContent:'center',
+                    alignContent:'center',
                     flexDirection:"column"
                 }} >
                     <h4 className='m-3 text-warning' >Contact Information</h4>
-                    <label className='col-5' >EmailId:
+                    <label className='col-9' >EmailId:
                         <input type="Email" className='form-control' required value={User.emailId} onChange={handleEmailChange} />
                     </label>
-                    <label  className='col-5'  >Mobile:
+                    <label  className='col-9'  >Mobile:
                         <input type="tel" pattern='[0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9][0-9]' className='form-control' required value={User.mobileNo} onChange={handleMobileNo} />
                     </label>
                 </div>
-                <div className='traveler_information row justify-content-center' >
-                    <h4 className='m-3 text-center text-warning' >Travelars Information</h4>
-                    <label  className='col-5'>Adult
+                <div className='traveler_information row' >
+                    <h4 className='m-3 text-warning' >Travelars Information</h4>
+                    <label  className='col-3'>Adult
                         <select className='form-control' value={User.Adult} onChange={handleAdult} >
                         <option value="1" >1</option>
                         <option value='2' >2</option>
@@ -82,28 +93,33 @@ const ConformBookingForm = () => {
                         <option value='4' >4</option>
                         </select>
                     </label>
-                    <label className='col-5'>Children
+                    <label className='col-3'>Children
                     <select className='form-control' value={User.child} onChange={handleChild}  >
                         <option value="1">1</option>
                         <option value="2">2</option>
                         <option value="3">3</option>
                     </select>
                     </label>
-                    <label htmlFor=""  className='col-8' >First Name:
+                    <label htmlFor=""  className='col-9' >First Name:
                     <input type="text" className=' form-control' value={User.FirstName} onChange={handleFirstName} />
                     </label>
-                    <label htmlFor="" className='col-8' >last Name:
+                    <label htmlFor="" className='col-9' >last Name:
                     <input type="text" className=' form-control' value={User.LastName} onChange={handleLastName} />
                     </label>
                 </div>
-                <div className="buttons m-3 d-flex justify-content-center ">
+                <div className="btn-card d-flex justify-content-center ">
                     <button className='btn btn-primary m-2 p-2 ' type='submit' >Confirm Ticket</button>
-                    <button className='btn btn-outline-warning m-2 p-2' >Reset</button>
+                    <button className='btn btn-outline-warning m-2 p-2' onClick={handleReset} >Reset</button>
                 </div>
                 </div>
-            </form>
+                </form>
+                <div className="rightimg">
+                        <img className='img-fluid img-cont' src={ticket} alt="ticket" />
+                </div>
+            </div>
             
-            <div className='Container ticket rounded m-5 bg-light border shadow-sm p-2' >
+            {isSubmiited &&
+                <div className='Container ticket rounded m-5 bg-light border shadow-sm p-2' >
                 <div className="ticket_wrapper m-2">
                     <h4>Congratulations</h4>
                     <h2>Your Ticket Is confirmed {<FcApproval/>}</h2>
@@ -111,18 +127,18 @@ const ConformBookingForm = () => {
                 </div>
                 <div className="container_wrapper my-4 shadow-sm rounded container p-3 card">
                 <div className="names mx-4">
-                        Name:Parvez Musharraf
+                        Name: {User.FirstName} {User.LastName}
                     </div>
                     <div className="citys row m-3 ">
-                        <h3 className='col-2' >Delhi</h3>
+                        <h3 className='col-2 ' >Pune</h3>
                         <h3 className='col-1' > To </h3> 
-                        <h3 className='col' >Pune</h3>
+                        <h3 className='col-3 ' >Mumbai</h3>
                     </div>
                     <div className="details row m-3 ">
                         <span className='col-2' >{<GiAirplaneDeparture/>} One Way</span>
                         <span className='col-2' >{<AiFillCalendar/>} 11 Nove</span>
-                        <span className='col-2' > {<FaChild/>}Child:1</span>
-                        <span className='col-2' >{<FcBusinessman/>} Adult:1</span>
+                        <span className='col-2' > {<FaChild/>}Child: {User.child}</span>
+                        <span className='col-2' >{<FcBusinessman/>} Adult: {User.Adult}</span>
                     </div>
                     <div className="bookingStatus row my-3">
                         <div className="ref col-4 mx-3 ">
@@ -141,7 +157,7 @@ const ConformBookingForm = () => {
                     }} >{<FcPrint/>}</li></div>
                     </div>
                 </div>
-            </div>
+            </div>}
         </div>
     )
 }
