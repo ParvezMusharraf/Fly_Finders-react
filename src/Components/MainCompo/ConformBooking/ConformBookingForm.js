@@ -1,9 +1,10 @@
 import React from 'react'
 import { useState } from 'react'
-import {FcApproval, FcBusiness, FcBusinessman, FcPrint} from 'react-icons/fc'
+import {FcApproval, FcBusinessman, FcPrint} from 'react-icons/fc'
 import {AiFillCalendar,} from 'react-icons/ai'
-import { GiAirplaneDeparture, GiConfirmed, } from 'react-icons/gi'
+import { GiAirplaneDeparture, } from 'react-icons/gi'
 import {FaChild} from 'react-icons/fa'
+import './ConformBooking.css'
 
 
 const ConformBookingForm = () => {
@@ -55,10 +56,15 @@ const ConformBookingForm = () => {
 
     return (
         <div>
-            <form onSubmit={handleSubmit}>
-                <div className='BookingForm card p-5 ' >
-                <div className='Contact_information row justify-content-center' >
-                    <h4 className='m-3 text-center text-warning' >Contact Information</h4>
+            <form onSubmit={handleSubmit} className='row card' >
+                <div className='BookingForm-right  p-5 col-7' >
+                <div className='Contact_information' style={{
+                    display:'flex',
+                    justifyContent:'start',
+                    alignContent:'start',
+                    flexDirection:"column"
+                }} >
+                    <h4 className='m-3 text-warning' >Contact Information</h4>
                     <label className='col-5' >EmailId:
                         <input type="Email" className='form-control' required value={User.emailId} onChange={handleEmailChange} />
                     </label>
@@ -94,6 +100,9 @@ const ConformBookingForm = () => {
                     <button className='btn btn-primary m-2 p-2 ' type='submit' >Confirm Ticket</button>
                     <button className='btn btn-outline-warning m-2 p-2' >Reset</button>
                 </div>
+                </div>
+                <div className="leftimg col-5">
+
                 </div>
             </form>
             
