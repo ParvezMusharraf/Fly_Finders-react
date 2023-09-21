@@ -24,6 +24,8 @@
 }
 .SocialLogo{
     font-size: 30px;
+    color: #000;
+
 }
 .SocialLogo:hover{
     color: orange;

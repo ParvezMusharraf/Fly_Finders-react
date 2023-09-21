@@ -35,6 +35,7 @@ const SignUp = () => {
           alt="Airplane" />
         </div>
         <div className="right form-group bg-light">
+          <h5 className='text-warning' >FlyFinders.com</h5>
           <label htmlFor="InputForNo" className='m-2' >Enter Your No</label>
           <input required className='form-control m-2'
             value={UserNo.MobileNo}

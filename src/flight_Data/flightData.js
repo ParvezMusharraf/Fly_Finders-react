@@ -1,24 +1,35 @@
+import pune from '../Images/Pune.avif'
+import mumbai from '../Images/Mumbai.jpg'
+import hydrabad from '../Images/Hydrabad.avif'
+import chinnai from '../Images/Chinnai.jpeg'
+import delhi from '../Images/delhi.jpg'
+import nagpur from '../Images/Nagpur.jpg'
+
 const FlightCityData = [
     {
     id:1,
     city:"Pune",
-    img:"",
+    img:pune,
     },
     {
     id:2,
-    city:"Mumbai"
+    city:"Mumbai",
+    img:mumbai
     },
     {
     id:3,
-    city:"Hydrabad"
+    city:"Hydrabad",
+    img:hydrabad
     },
     {
     id:4,
-    city:"Delhi"
+    city:"Delhi",
+    img:delhi
     },
     {
     id:5,
-    city:"Chennai"
+    city:"Chennai",
+    img:chinnai
     },
     {
     id:6,
@@ -26,7 +37,8 @@ const FlightCityData = [
     },
     {
     id:7,
-    city:"Nagpur"
+    city:"Nagpur",
+    img:nagpur
     },
 ]
 

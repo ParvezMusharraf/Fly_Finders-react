@@ -2,7 +2,7 @@ const faqsData=[
     {
         id:1,
         Question:"What are the advantages of online flight booking? ",
-        Answer:"Through online air ticket booking you can easily compare prices of multiple airlines to get your air tickets at lowest rates. Also, it is easy to do online flight booking as multiple payment options are available on websites like Udaan."
+        Answer:"Through online air ticket booking you can easily compare prices of multiple airlines to get your air tickets at lowest rates. Also, it is easy to do online flight booking as multiple payment options are available on websites like FlyFinders."
     },
     {
         id:2,
@@ -12,7 +12,7 @@ const faqsData=[
     {
         id:3,
         Question:'How can I book flight tickets online? ',
-        Answer:'With the help of Udaan, you can easily book both domestic flight tickets and international air tickets in simple steps within a few seconds.'
+        Answer:'With the help of FlyFinders, you can easily book both domestic flight tickets and international air tickets in simple steps within a few seconds.'
     },
     {
         id:4,
@@ -21,13 +21,13 @@ const faqsData=[
     },
     {
         id:5,
-        Question:"Why should I make a flight booking from Udaan? ",
-        Answer:"Along with an easy flight booking process, Udaan offers various discounts, instant EMI options and credit/ debit card related offers on flight booking. By availing such benefits, you can book air tickets at reasonable prices.",
+        Question:"Why should I make a flight booking from FlyFinders? ",
+        Answer:"Along with an easy flight booking process, FlyFinders offers various discounts, instant EMI options and credit/ debit card related offers on flight booking. By availing such benefits, you can book air tickets at reasonable prices.",
     },
     {
         id:6,
         Question:"In how much time, my flight booking will get confirmed? ",
-        Answer:"After completing the air ticket booking process on Udaan, you will get an instant confirmation mail and a message on the registered number and email id respectively.",
+        Answer:"After completing the air ticket booking process on FlyFinders, you will get an instant confirmation mail and a message on the registered number and email id respectively.",
     },
 ]
 export default faqsData

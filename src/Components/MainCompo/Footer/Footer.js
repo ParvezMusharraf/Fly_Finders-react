@@ -1,6 +1,7 @@
 import React from 'react'
 import { FaFacebook, FaInstagram, FaLinkedinIn, FaTwitter } from 'react-icons/fa';
 import '../Footer/footer.css'
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   return (
@@ -12,7 +13,7 @@ const Footer = () => {
                     <h4>Get To Now</h4>
                     </div>
                     <ul className='nav-ulf' >
-                        <li>About Us</li>
+                        <Link className='text-decoration-none text-dark' to='/about'>About Us</Link>
                         <li>Board Of direaction</li>
                         <li>Press Release</li>
                         <li>Our Awards</li>
@@ -45,10 +46,10 @@ const Footer = () => {
                     <h4>Social</h4>
                     </div>
                     <ul className='nav-ulf SocialUi' >
-                        <li className='SocialLogo' >{<FaInstagram/>}</li>
-                        <li className='SocialLogo'  >{<FaFacebook/>}</li>
-                        <li className='SocialLogo' >{<FaTwitter/>}</li>
-                        <li className='SocialLogo' >{<FaLinkedinIn/>}</li>
+                        <Link className='SocialLogo' to='www.instagram.com' > {<FaInstagram/>}</Link>
+                        <Link className='SocialLogo' to='www.facebook.com' >{<FaFacebook/>}</Link>
+                        <Link className='SocialLogo' to='www.twitter.com' >{<FaTwitter/>}</Link>
+                        <Link className='SocialLogo' to='www.linkedIn.com' >{<FaLinkedinIn/>}</Link>
                     </ul>
                 </div>
             </div>

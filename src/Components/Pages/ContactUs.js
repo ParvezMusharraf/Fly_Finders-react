@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import './contactUs.css'
 import {FaFacebookF, FaInstagram, FaLinkedinIn, FaTwitter, } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 
 const Hydrabad = () => {
       const [formSubmiited, setformSubmiited] = useState(false)
@@ -69,10 +70,10 @@ const Hydrabad = () => {
                       </label>
                       <label className='p-3' > Also Follow Us On :
                         <ul className='nav p-3' >
-                          <li className='p-1' >{<FaInstagram/>}</li>
-                          <li className='p-1' >{<FaFacebookF/>}</li>
-                          <li className='p-1' >{<FaTwitter/>}</li>
-                          <li className='p-1' >{<FaLinkedinIn/>}</li>
+                          <Link className='p-1 link-text'  >{<FaInstagram/>}</Link>
+                          <Link className='p-1 link-text' >{<FaFacebookF/>}</Link>
+                          <Link className='p-1 link-text' >{<FaTwitter/>}</Link>
+                          <Link className='p-1 link-text' >{<FaLinkedinIn/>}</Link>
                         </ul>
                       </label>
                       </div>
