@@ -16,9 +16,9 @@ const NavRouter = () => {
           <Route exact path='/Fly_Finders-react' element={<Navbar/>} >
           <Route path= '/Fly_Finders-react' element={<Main/>}/>
           <Route path='/Fly_Finders-react/conformDetailsform' element={<ConformBookingForm/>} />
-          <Route path='/about' element={<Delhi/>} />
-          <Route path='/contact' element={<Hydrabad/>} />
-          <Route path='/signup' element={<SignUp/>} />
+          <Route path='/Fly_Finders-react/about' element={<Delhi/>} />
+          <Route path='/Fly_Finders-react/contact' element={<Hydrabad/>} />
+          <Route path='/Fly_Finders-react/signup' element={<SignUp/>} />
           </Route>
         </Routes>
     </BrowserRouter>
