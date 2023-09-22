@@ -13,9 +13,9 @@ const NavRouter = () => {
   return (
     <BrowserRouter basename='/Fly_Finders-react' >
         <Routes>
-          <Route path='/' element={<Navbar/>} >
-          <Route path= '/' element={<Main/>}/>
-          <Route path='/conformDetailsform' element={<ConformBookingForm/>} />
+          <Route exact path='/Fly_Finders-react' element={<Navbar/>} >
+          <Route path= '/Fly_Finders-react' element={<Main/>}/>
+          <Route path='/Fly_Finders-react/conformDetailsform' element={<ConformBookingForm/>} />
           <Route path='/about' element={<Delhi/>} />
           <Route path='/contact' element={<Hydrabad/>} />
           <Route path='/signup' element={<SignUp/>} />
