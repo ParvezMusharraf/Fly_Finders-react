@@ -130,9 +130,9 @@ const ConformBookingForm = () => {
                         Name: {User.FirstName} {User.LastName}
                     </div>
                     <div className="citys row m-3 ">
-                        <h3 className='col-2 ' >Pune</h3>
+                        <h3 className='col-2 ' >Mumbai</h3>
                         <h3 className='col-1' > To </h3> 
-                        <h3 className='col-3 ' >Mumbai</h3>
+                        <h3 className='col-3 ' >Pune</h3>
                     </div>
                     <div className="details row m-3 ">
                         <span className='col-2' >{<GiAirplaneDeparture/>} One Way</span>
