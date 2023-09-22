@@ -61,7 +61,7 @@ const ConformBookingForm = () => {
     const handleSubmit = (e) =>{
         e.preventDefault()
         setisSubmiited(true)
-        alert('Ticket Confirmed Printed below form')
+        alert('Ticket Confirmed')
     }
 
     return (
