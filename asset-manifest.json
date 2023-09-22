@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Fly_Finders-react/static/css/main.db581ff0.css",
-    "main.js": "/Fly_Finders-react/static/js/main.13d05850.js",
+    "main.js": "/Fly_Finders-react/static/js/main.855384a1.js",
     "static/js/787.26ff2dcb.chunk.js": "/Fly_Finders-react/static/js/787.26ff2dcb.chunk.js",
     "static/media/AirplaneBackground.jpg": "/Fly_Finders-react/static/media/AirplaneBackground.af89939617b3f26aa266.jpg",
     "static/media/Mumbai.jpg": "/Fly_Finders-react/static/media/Mumbai.e0f8018d428f990056e4.jpg",
@@ -17,11 +17,11 @@
     "static/media/deltaLogo.webp": "/Fly_Finders-react/static/media/deltaLogo.db01d62305647a0477fb.webp",
     "index.html": "/Fly_Finders-react/index.html",
     "main.db581ff0.css.map": "/Fly_Finders-react/static/css/main.db581ff0.css.map",
-    "main.13d05850.js.map": "/Fly_Finders-react/static/js/main.13d05850.js.map",
+    "main.855384a1.js.map": "/Fly_Finders-react/static/js/main.855384a1.js.map",
     "787.26ff2dcb.chunk.js.map": "/Fly_Finders-react/static/js/787.26ff2dcb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db581ff0.css",
-    "static/js/main.13d05850.js"
+    "static/js/main.855384a1.js"
   ]
 }
