@@ -11,7 +11,7 @@ import Main from '../Components/MainCompo/Main'
 
 const NavRouter = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename='/Fly_Finders-react' >
         <Routes>
           <Route path='/' element={<Navbar/>} >
           <Route path= '/' element={<Main/>}/>

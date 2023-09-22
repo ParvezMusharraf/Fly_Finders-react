@@ -9,7 +9,6 @@ function App() {
     <>
     <div className="app">
     <NavRouter/>
-    {/* <Crausel/> */}
     </div>
     </>
   );
