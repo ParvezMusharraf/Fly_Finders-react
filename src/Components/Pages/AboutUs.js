@@ -17,7 +17,6 @@ const About = () => {
         <div className="col-7 col-img d-flex align-items-center justify-content-center">
           <h3 className='btn bg-white' onClick={()=> navigate('/') } >Book Now</h3>
         </div>
-        <h4></h4>
         <div className="col-6 col-img2 bg-primary">
         </div>
         <div className="col-6 p-5 bg-warning ">

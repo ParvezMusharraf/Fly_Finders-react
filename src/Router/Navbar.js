@@ -20,13 +20,13 @@ const Navbar = () => {
                 <Link className='nav-link text-dark' to="/" >Home</Link>
             </li>
             <li className='nav-city-li nav-item shadow-sm'  >
-                <Link className='nav-link text-dark' to='/Fly_Finders-react/conformDetailsform' >Confirm Booking</Link>
+                <Link className='nav-link text-dark' to='/conformDetailsform' >Confirm Booking</Link>
             </li>
             <li className='nav-city-li nav-item shadow-sm' >
-                <Link className='nav-link text-dark' to='/Fly_Finders-react/contact'>Contact Us</Link>
+                <Link className='nav-link text-dark' to='/contact'>Contact Us</Link>
             </li>
             <li className='nav-city-li nav-item shadow-sm' >
-                <Link className='nav-link text-dark' to='/Fly_Finders-react/about' >AboutUs</Link>
+                <Link className='nav-link text-dark' to='/about' >AboutUs</Link>
             </li>
         </ul>
                 <div className="SignUp btn btn-primary ">
