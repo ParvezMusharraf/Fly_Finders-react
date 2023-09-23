@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Fly_Finders-react/static/css/main.db581ff0.css",
-    "main.js": "/Fly_Finders-react/static/js/main.0bf6d505.js",
+    "main.js": "/Fly_Finders-react/static/js/main.977bb003.js",
     "static/js/787.26ff2dcb.chunk.js": "/Fly_Finders-react/static/js/787.26ff2dcb.chunk.js",
     "static/media/AirplaneBackground.jpg": "/Fly_Finders-react/static/media/AirplaneBackground.af89939617b3f26aa266.jpg",
     "static/media/Mumbai.jpg": "/Fly_Finders-react/static/media/Mumbai.e0f8018d428f990056e4.jpg",
@@ -11,17 +11,18 @@
     "static/media/Nagpur.jpg": "/Fly_Finders-react/static/media/Nagpur.6709be2300cd56d47a39.jpg",
     "static/media/—Pngtree—ticket online booking for trip_6822189.png": "/Fly_Finders-react/static/media/—Pngtree—ticket online booking for trip_6822189.3e0ec7a4ed9dc96bacbc.png",
     "static/media/Chinnai.jpeg": "/Fly_Finders-react/static/media/Chinnai.f72a93b2c8653047b80b.jpeg",
+    "static/media/kolkatta.jpg": "/Fly_Finders-react/static/media/kolkatta.d6bb1370fa915982f1c9.jpg",
     "static/media/Pune.avif": "/Fly_Finders-react/static/media/Pune.87cd68ab70318959dec5.avif",
     "static/media/UnitedLogo.png": "/Fly_Finders-react/static/media/UnitedLogo.9601f22d887e89f886b4.png",
     "static/media/about-col-1.avif": "/Fly_Finders-react/static/media/about-col-1.2110f30775d1fd901d68.avif",
     "static/media/deltaLogo.webp": "/Fly_Finders-react/static/media/deltaLogo.db01d62305647a0477fb.webp",
     "index.html": "/Fly_Finders-react/index.html",
     "main.db581ff0.css.map": "/Fly_Finders-react/static/css/main.db581ff0.css.map",
-    "main.0bf6d505.js.map": "/Fly_Finders-react/static/js/main.0bf6d505.js.map",
+    "main.977bb003.js.map": "/Fly_Finders-react/static/js/main.977bb003.js.map",
     "787.26ff2dcb.chunk.js.map": "/Fly_Finders-react/static/js/787.26ff2dcb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.db581ff0.css",
-    "static/js/main.0bf6d505.js"
+    "static/js/main.977bb003.js"
   ]
 }
