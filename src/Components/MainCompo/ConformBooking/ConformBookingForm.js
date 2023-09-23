@@ -8,6 +8,8 @@ import {FcApproval, FcBusinessman, FcPrint} from 'react-icons/fc'
 import {AiFillCalendar,} from 'react-icons/ai'
 import { GiAirplaneDeparture, } from 'react-icons/gi'
 import {FaChild} from 'react-icons/fa'
+import {BiTransferAlt} from 'react-icons/bi'
+import {MdConnectingAirports, MdOutlineAirportShuttle} from 'react-icons/md'
 import './ConformBooking.css'
 import ticket from '../../../Images/—Pngtree—ticket online booking for trip_6822189.png'
 
@@ -138,26 +140,40 @@ const ConformBookingForm = ({date}) => {
                     <span className='m-2 ' >Your Reservation for <b>{citieiesFrom.city}</b> - <b>{citieiesTo.city}</b> flight on <b>{date}</b> at {fly.At} is confirmed </span>
                 </div>
                 <div className="container_wrapper my-4 shadow-sm rounded container p-3 card">
-                <div className="names mx-4">
-                        Name: {User.FirstName} {User.LastName}
+                <div className="names mx-3">
+                    <div className="row">
+                        <div className='col-6 mx-3'>
+                        <h5>Name: {User.FirstName} {User.LastName}</h5>
+                        <img className='img-fluid w-25 border rounded shadow-sm'  src={fly.AirlineLogoPng} alt="" />
+                        </div>
+                        <div className='col-5'  style={{
+                            float:'right'
+                        }} >
+                        <h5> Departure:{<MdConnectingAirports/>} </h5>
+                        <span className='text-muted' >Chatrapti Shivaji Maharaj Tarminal</span>
+                        <p>Reporting Time: <b>40 Mins before Flight Time</b> </p>
+                        </div>
+                    </div>
                     </div>
                     <div className="citys row m-3 ">
                         <div className='col-2 '>
-                        <span>From</span>
+                        <span className='text-muted' >From</span>
                         <h3  >{citieiesFrom.city}</h3>
                         </div>
-                        <h5 className='col-1' > To </h5> 
+                        <div className='col-1'  >
+                        <h2 >{<BiTransferAlt/>} </h2> 
+                        </div>
                         <div className='col-3 '  >
-                            <span>To</span>
+                            <span className='text-muted' >To</span>
                         <h3>{citieiesTo.city}</h3>
                         </div>
                     </div>
                     <div className="details row m-3 ">
-                        <span className='col-2' >{<GiAirplaneDeparture/>} One Way</span>
-                        <span className='col-2' >{<AiFillCalendar/>} <b>{date}</b></span>
-                        <span className='col-2' > {<FaChild/>}Child: <b>{User.child}</b></span>
-                        <span className='col-2' >{<FcBusinessman/>} Adult: <b>{User.Adult}</b></span>
-                        <span className='col-2' >Price: <b>{fly.Price}</b>/-</span>
+                        <span className='col-2 border rounded shadow-sm p-2 m-1' >{<GiAirplaneDeparture/>} One Way</span>
+                        <span className='col-2 border rounded shadow-sm p-2 m-1' >{<AiFillCalendar/>} <b>{date}</b></span>
+                        <span className='col-2 border rounded shadow-sm p-2 m-1' > {<FaChild/>}Child: <b>{User.child}</b></span>
+                        <span className='col-2 border rounded shadow-sm p-2 m-1' >{<FcBusinessman/>} Adult: <b>{User.Adult}</b></span>
+                        <span className='col-2 border rounded shadow-sm p-2 m-1' >Price: <b>{fly.Price}</b>/-</span>
                     </div>
                     <div className="bookingStatus row my-3">
                         <div className="ref col-4 mx-3 ">
@@ -178,7 +194,8 @@ const ConformBookingForm = ({date}) => {
                     }} >{<FcPrint/>}</li></div>
                     </div>
                 </div>
-                </div>}
+                </div>
+                }
         </div>
     )
 }
