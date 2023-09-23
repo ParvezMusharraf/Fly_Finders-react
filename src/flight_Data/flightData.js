@@ -4,6 +4,7 @@ import hydrabad from '../Images/Hydrabad.avif'
 import chinnai from '../Images/Chinnai.jpeg'
 import delhi from '../Images/delhi.jpg'
 import nagpur from '../Images/Nagpur.jpg'
+import kolkatta from '../Images/kolkatta.jpg'
 
 const FlightCityData = [
     {
@@ -33,7 +34,8 @@ const FlightCityData = [
     },
     {
     id:6,
-    city:"Kolkatta"
+    city:"Kolkatta",
+    img:kolkatta
     },
     {
     id:7,

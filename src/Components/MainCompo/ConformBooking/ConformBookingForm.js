@@ -12,7 +12,7 @@ import './ConformBooking.css'
 import ticket from '../../../Images/—Pngtree—ticket online booking for trip_6822189.png'
 
 
-const ConformBookingForm = () => {
+const ConformBookingForm = ({date}) => {
 
     const {FlightCardId} = useParams();
     const fly = FlightRoutesDetails.find(f=>f.id==FlightCardId)
@@ -127,37 +127,48 @@ const ConformBookingForm = () => {
                 </div>
             </div>
             
-            {/* {isSubmiited && */}
+            {isSubmiited &&
                 <div className='Container ticket rounded m-5 bg-light border shadow-sm p-2' >
                 <div className="ticket_wrapper m-2">
-                    <h4>Congratulations</h4>
+                    <h3 style={{
+                        float:'right'
+                    }} className='text-warning' >FlyFinders</h3>
+                    <h4 className='text-green' >Congratulations</h4>
                     <h2>Your Ticket Is confirmed {<FcApproval/>}</h2>
-                    <span className='m-2 ' >your reservation for {citieiesFrom.city} - {citieiesTo.city} flight on 11 nov {fly.date} at 10:45 hourse is confirmed </span>
+                    <span className='m-2 ' >Your Reservation for <b>{citieiesFrom.city}</b> - <b>{citieiesTo.city}</b> flight on <b>{date}</b> at {fly.At} is confirmed </span>
                 </div>
                 <div className="container_wrapper my-4 shadow-sm rounded container p-3 card">
                 <div className="names mx-4">
                         Name: {User.FirstName} {User.LastName}
                     </div>
                     <div className="citys row m-3 ">
-                        <h3 className='col-2 ' >{citieiesFrom.city}</h3>
-                        <h3 className='col-1' > To </h3> 
-                        <h3 className='col-3 ' >{citieiesTo.city}</h3>
+                        <div className='col-2 '>
+                        <span>From</span>
+                        <h3  >{citieiesFrom.city}</h3>
+                        </div>
+                        <h5 className='col-1' > To </h5> 
+                        <div className='col-3 '  >
+                            <span>To</span>
+                        <h3>{citieiesTo.city}</h3>
+                        </div>
                     </div>
                     <div className="details row m-3 ">
                         <span className='col-2' >{<GiAirplaneDeparture/>} One Way</span>
-                        <span className='col-2' >{<AiFillCalendar/>} 11 Nove</span>
-                        <span className='col-2' > {<FaChild/>}Child: {User.child}</span>
-                        <span className='col-2' >{<FcBusinessman/>} Adult: {User.Adult}</span>
-                        <span>{fly.Price}</span>
+                        <span className='col-2' >{<AiFillCalendar/>} <b>{date}</b></span>
+                        <span className='col-2' > {<FaChild/>}Child: <b>{User.child}</b></span>
+                        <span className='col-2' >{<FcBusinessman/>} Adult: <b>{User.Adult}</b></span>
+                        <span className='col-2' >Price: <b>{fly.Price}</b>/-</span>
                     </div>
                     <div className="bookingStatus row my-3">
                         <div className="ref col-4 mx-3 ">
                             <span> PNR Booking refrence </span>
-                            <h3>ASDFWDF43</h3>
+                            <h3 className='text-warning' >ASDFWDF43</h3>
                         </div>
                         <div className="pym col-4 mx-3 ">
                             <span>Payment Status</span>
-                            <h3>Complete</h3>
+                            <h3 style={{
+                                color:"lightgreen"
+                            }} ><b>Complete</b></h3>
                         </div>
                     </div>
                     <div className="icon-wrapper w-100">
@@ -167,7 +178,7 @@ const ConformBookingForm = () => {
                     }} >{<FcPrint/>}</li></div>
                     </div>
                 </div>
-            </div>
+                </div>}
         </div>
     )
 }

@@ -6,11 +6,6 @@ import { Link, useNavigate } from 'react-router-dom'
 const FlightBookingCard = ({At,To,hours,Price,Airline,cityIdSelected,toCityIdSelected,AirlineLogo}) => {
 
 
-    // const navigate = useNavigate();
-    // const handleClick =()=>{
-    //     navigate('/conformDetailsform')
-    // }
-
   return (
     <div className='card-main my-3 mb-4 '>
         <div className="card-wrapper">

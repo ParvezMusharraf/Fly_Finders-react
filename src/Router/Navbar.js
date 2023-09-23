@@ -19,9 +19,9 @@ const Navbar = () => {
             <li className='nav-city-li nav-item shadow-sm' >
                 <Link className='nav-link text-dark' to="/" >Home</Link>
             </li>
-            <li className='nav-city-li nav-item shadow-sm'  >
+            {/* <li className='nav-city-li nav-item shadow-sm'  >
                 <Link className='nav-link text-dark' to='/conformDetailsform' >Confirm Booking</Link>
-            </li>
+            </li> */}
             <li className='nav-city-li nav-item shadow-sm' >
                 <Link className='nav-link text-dark' to='/contact'>Contact Us</Link>
             </li>

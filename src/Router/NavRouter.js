@@ -6,16 +6,18 @@ import SignUp from '../Components/SignUp/SignUp'
 import Navbar from './Navbar'
 import ConformBookingForm from '../Components/MainCompo/ConformBooking/ConformBookingForm'
 import Main from '../Components/MainCompo/Main'
+import { useState } from 'react'
 
 
 
 const NavRouter = () => {
+  const [date,setDate]=useState('');
   return (
     <BrowserRouter basename='/Fly_Finders-react' >
         <Routes>
           <Route path='/' element={<Navbar/>} >
-          <Route path= '/' element={<Main/>}/>
-          <Route path=':FlightCardId' element={<ConformBookingForm/>} />
+          <Route path= '/' element={<Main date={date} setDate={setDate} />}/>
+          <Route path=':FlightCardId' element={<ConformBookingForm date={date} setDate={setDate} />} />
           <Route path='/about' element={<Delhi/>} />
           <Route path='/contact' element={<Hydrabad/>} />
           <Route path='/signup' element={<SignUp/>} />

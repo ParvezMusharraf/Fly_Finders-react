@@ -13,7 +13,7 @@ const FlightBookinCardList = ({cityIdSelected,toCityIdSelected}) => {
   const FilterdCitysList = FlightRoutesDetails.filter(ct=> { return ct.FromCityFlightId==cityIdSelected ,ct.ToCityFlightId==toCityIdSelected})
 
 
-    const DelhiOptionList = FilterdCitysList.map(d=><Link key={d.id}  to={""+d.id} ><FlightBookingCard flight={d} 
+    const DelhiOptionList = FilterdCitysList.map(d=><Link className='text-decoration-none text-dark' key={d.id} to={""+d.id} ><FlightBookingCard flight={d} 
         id={d.id} At={d.At} To={d.To} hours={d.hours} Airline={d.Airline} Price={d.Price} cityIdSelected={ct.city}
         toCityIdSelected={tct.city} AirlineLogo = {d.AirlineLogoPng} /></Link>)
 

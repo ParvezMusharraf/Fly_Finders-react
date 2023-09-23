@@ -6,11 +6,11 @@ import FlightBookingCardList from "../FlightBookingCard/FlightBookingCardList";
 import Crausel from "../Crausel/Crausel";
 import FlightCityData from "../../flight_Data/flightData";
 
-const Main = () => {
+const Main = ({date,setDate}) => {
 
-  const [cityIdSelected, setcityIdSelected] = useState();
-  const [toCityIdSelected, settoCityIdSelected] = useState();
-  const [date,setDate]=useState('You Have not selected Date')
+  const [cityIdSelected, setcityIdSelected] = useState(1);
+  const [toCityIdSelected, settoCityIdSelected] = useState(2);
+
   const [show,setShow]=useState(false);
 
   const citieiesFrom = FlightCityData.find(c=>c.id == cityIdSelected)
