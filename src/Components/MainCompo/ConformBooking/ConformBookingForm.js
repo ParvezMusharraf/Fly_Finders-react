@@ -76,7 +76,7 @@ const ConformBookingForm = ({date}) => {
     }
 
     return (
-        <div>
+        <div className='container' >
             <div className=" card  w-100 container form-container  row">
             <form onSubmit={handleSubmit} className='left-form ' >
                 <div className='p-2' >
@@ -144,7 +144,7 @@ const ConformBookingForm = ({date}) => {
                     <div className="row">
                         <div className='col-6 mx-3'>
                         <h5>Name: {User.FirstName} {User.LastName}</h5>
-                        <img className='img-fluid w-25 border rounded shadow-sm'  src={fly.AirlineLogoPng} alt="" />
+                        <img className='img-fluid w-25 border rounded shadow-sm m-2 p-2'  src={fly.AirlineLogoPng} alt="" />
                         </div>
                         <div className='col-5'  style={{
                             float:'right'
