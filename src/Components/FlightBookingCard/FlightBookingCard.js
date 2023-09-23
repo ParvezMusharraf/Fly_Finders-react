@@ -1,15 +1,15 @@
 import React from 'react'
 import '../FlightBookingCard/FlightBookingCard.css'
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 const FlightBookingCard = ({At,To,hours,Price,Airline,cityIdSelected,toCityIdSelected,AirlineLogo}) => {
 
 
-    const navigate = useNavigate();
-    const handleClick =()=>{
-        navigate('/conformDetailsform')
-    }
+    // const navigate = useNavigate();
+    // const handleClick =()=>{
+    //     navigate('/conformDetailsform')
+    // }
 
   return (
     <div className='card-main my-3 mb-4 '>
@@ -46,7 +46,7 @@ const FlightBookingCard = ({At,To,hours,Price,Airline,cityIdSelected,toCityIdSel
                 </div>
             </div>
             <h5>Price {Price}/rs</h5>
-            <button className='btn btn-primary' onClick={handleClick} >Book Now </button>
+            <button className='btn btn-primary' >Book Now </button>
         </div>
     </div>
   )

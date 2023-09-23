@@ -26,7 +26,7 @@ const Main = () => {
         {show ? <div className="container h-100 mt-5" >
             <h4 className="d-flex justify-content-center align-item-center">Search Results for {citieiesFrom.city} to {citieiesTo.city} <br/></h4>
             <span>Date: {date} </span>
-            <FlightBookingCardList toCityIdSelected={toCityIdSelected} cityIdSelected={cityIdSelected} />
+            <FlightBookingCardList toCityIdSelected={toCityIdSelected} cityIdSelected={cityIdSelected} date={date} />
             
         </div>:
         <div className='container' style={{ 

@@ -1,4 +1,8 @@
 import React from 'react'
+import { useParams } from 'react-router-dom'
+import FlightRoutesDetails from '../../../flight_Data/DelhiData'
+import FlightCityData from '../../../flight_Data/flightData'
+
 import { useState } from 'react'
 import {FcApproval, FcBusinessman, FcPrint} from 'react-icons/fc'
 import {AiFillCalendar,} from 'react-icons/ai'
@@ -9,6 +13,11 @@ import ticket from '../../../Images/—Pngtree—ticket online booking for trip_
 
 
 const ConformBookingForm = () => {
+
+    const {FlightCardId} = useParams();
+    const fly = FlightRoutesDetails.find(f=>f.id==FlightCardId)
+    const citieiesFrom = FlightCityData.find(c=>c.id == fly.FromCityFlightId)
+    const citieiesTo=FlightCityData.find(c=>c.id==fly.ToCityFlightId)
     
     const [isSubmiited, setisSubmiited] = useState(false)
     const [User,setUser]=useState({
@@ -118,27 +127,28 @@ const ConformBookingForm = () => {
                 </div>
             </div>
             
-            {isSubmiited &&
+            {/* {isSubmiited && */}
                 <div className='Container ticket rounded m-5 bg-light border shadow-sm p-2' >
                 <div className="ticket_wrapper m-2">
                     <h4>Congratulations</h4>
                     <h2>Your Ticket Is confirmed {<FcApproval/>}</h2>
-                    <span className='m-2 ' >your reservation for delhi - pune flight on 11 nov at 10:45 hourse is confirmed </span>
+                    <span className='m-2 ' >your reservation for {citieiesFrom.city} - {citieiesTo.city} flight on 11 nov {fly.date} at 10:45 hourse is confirmed </span>
                 </div>
                 <div className="container_wrapper my-4 shadow-sm rounded container p-3 card">
                 <div className="names mx-4">
                         Name: {User.FirstName} {User.LastName}
                     </div>
                     <div className="citys row m-3 ">
-                        <h3 className='col-2 ' >Mumbai</h3>
+                        <h3 className='col-2 ' >{citieiesFrom.city}</h3>
                         <h3 className='col-1' > To </h3> 
-                        <h3 className='col-3 ' >Pune</h3>
+                        <h3 className='col-3 ' >{citieiesTo.city}</h3>
                     </div>
                     <div className="details row m-3 ">
                         <span className='col-2' >{<GiAirplaneDeparture/>} One Way</span>
                         <span className='col-2' >{<AiFillCalendar/>} 11 Nove</span>
                         <span className='col-2' > {<FaChild/>}Child: {User.child}</span>
                         <span className='col-2' >{<FcBusinessman/>} Adult: {User.Adult}</span>
+                        <span>{fly.Price}</span>
                     </div>
                     <div className="bookingStatus row my-3">
                         <div className="ref col-4 mx-3 ">
@@ -157,7 +167,7 @@ const ConformBookingForm = () => {
                     }} >{<FcPrint/>}</li></div>
                     </div>
                 </div>
-            </div>}
+            </div>
         </div>
     )
 }
