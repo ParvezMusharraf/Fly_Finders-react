@@ -8,7 +8,7 @@ const Footer = () => {
     <div className='footer mt-5 w-100 bg-white' >
         <div className="footer-wrapper container ">
             <div className="row p-5">
-                <div className="col-3 card footercard">
+                <div className="col-xl-3 col-md-5 col-sm-10 card footercard">
                     <div className="heading">
                     <h4>Get To Now</h4>
                     </div>
@@ -19,7 +19,7 @@ const Footer = () => {
                         <li>Our Awards</li>
                     </ul>
                     </div>
-                <div className="col-3  card footercard">
+                <div className="col-xl-3 col-md-5 col-sm-10  card footercard">
                     <div className="heading">
                     <h4>Services</h4>
                     </div>
@@ -30,7 +30,7 @@ const Footer = () => {
                         <li>Refund Claim</li>
                     </ul>
                 </div>
-                <div className="col-3 card footercard">
+                <div className="col-xl-3 col-md-5 col-sm-10 card footercard">
                     <div className="heading">
                     <h4>Quick Links</h4>
                     </div>
@@ -41,7 +41,7 @@ const Footer = () => {
                         <li>Destinations</li>
                     </ul>
                 </div>
-                <div className="col-3 card footercard">
+                <div className="col-xl-3 col-md-5 col-sm-10 card footercard">
                     <div className="heading">
                     <h4>Social</h4>
                     </div>

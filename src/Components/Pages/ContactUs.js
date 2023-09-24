@@ -54,8 +54,8 @@ const Hydrabad = () => {
               <h3>Lets Start Conversation</h3>
             </div>
             <div className="row">
-            <div className="form-wrapper container d-flex p-5">
-              <div className="col-6">
+            <div className="form-wrapper row container d-flex p-5">
+              <div className="col-xl-6  col-md-6 col-sm-12 ">
                   <div className="heading">
                     <h4>Ask how can I help You</h4>
                   </div>
@@ -79,7 +79,7 @@ const Hydrabad = () => {
                       </div>
                     </div>
               </div>
-              <div className="col-6 row " >
+              <div className="col-xl-6 col-md-6 col-sm-12 row " >
                 <h5>Plaese Feel Free To ask any Query</h5>
                 <form onSubmit={handleSubmit} >
                 <div className="form-inputs row form-group ">
