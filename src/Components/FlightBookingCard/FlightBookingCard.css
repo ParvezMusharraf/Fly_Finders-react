@@ -47,4 +47,29 @@ margin: 2px;
     flex-direction: column;
     align-items: center;
     justify-content: center ;
+    flex-wrap: nowrap;
 }
+
+/* .lik-Card{
+    display: contents;
+    width:100vh
+} */
+
+
+@media screen and (max-width:800px) {
+    .card-wrapper{
+        flex-direction: column;
+    }
+    .from_city{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .city-upper{
+        flex-wrap: wrap;
+    }
+
+    .to_city{
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+} 

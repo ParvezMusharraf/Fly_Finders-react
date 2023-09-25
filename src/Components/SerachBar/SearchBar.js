@@ -43,7 +43,7 @@ const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityI
       <form className="searchBar m-3" onSubmit={handleSubmit}>
         <div className="searchbar_wrapper">
           <div className="upperSection">
-            Search Your Flight Here
+            Search Your Flight Here and please select date:
           </div>
           <div className="mainSection">
             <div className="ml-2 upper">
@@ -71,7 +71,7 @@ const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityI
             </div>
           </div>
           <div className="lowerSection d-flex justify-content-center">
-            <button className='btn btn-primary' type='submit' onClick={()=>setShow(!show)} >Search Flights</button>
+            <button className='btn btn-primary' type='submit' onClick={()=>setShow(!show)} disabled={date==''} >Search Flights</button>
           </div>
         </div>
       </form>

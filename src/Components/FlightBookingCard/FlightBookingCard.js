@@ -1,6 +1,5 @@
 import React from 'react'
 import '../FlightBookingCard/FlightBookingCard.css'
-import { Link, useNavigate } from 'react-router-dom'
 
 
 const FlightBookingCard = ({At,To,hours,Price,Airline,cityIdSelected,toCityIdSelected,AirlineLogo}) => {
@@ -33,7 +32,7 @@ const FlightBookingCard = ({At,To,hours,Price,Airline,cityIdSelected,toCityIdSel
                     <span className='city-item'>{toCityIdSelected}</span>
                     <span className='city-item'>India</span>
                 </div>
-                <img style={{
+                <img className='m-1 ' style={{
                             width:'auto',
                             height:"40px"
                         }} src={AirlineLogo} alt={Airline} />

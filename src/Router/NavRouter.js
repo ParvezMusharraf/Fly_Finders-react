@@ -12,6 +12,8 @@ import { useState } from 'react'
 
 const NavRouter = () => {
   const [date,setDate]=useState('');
+
+
   return (
     <BrowserRouter basename='/Fly_Finders-react' >
         <Routes>
