@@ -17,7 +17,12 @@ const Main = ({date,setDate}) => {
   const citieiesTo=FlightCityData.find(c=>c.id==toCityIdSelected)
 
   return (
-    <div>
+    <div style={{
+      display:'flex',
+      width:"100%",
+      justifyContent:"center",
+      flexDirection:"column",
+    }}>
       <SearchBar cityIdSelected={cityIdSelected}  setcityIdSelected={setcityIdSelected}
             toCityIdSelected={toCityIdSelected} settoCityIdSelected={settoCityIdSelected}
             date={date} setDate={setDate}

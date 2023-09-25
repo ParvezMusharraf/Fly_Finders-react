@@ -1,15 +1,14 @@
 .searchBar{
-    width: 1200px;
+    width:90vw;
     background: rgb(255, 255, 255);
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 15px;
     border-radius: 20px;
     padding: 24px;
-    margin: 0px auto;
+    margin: 20px ;
 }
 .searchbar_wrapper{
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
     justify-content: center;
 }
 .mainSection{
@@ -20,7 +19,7 @@
 }
 .upper{
     display: flex;
-    width: 40%;
+    width: 50%;
     flex-direction: row;
     align-items: center;
     justify-content: space-evenly;
@@ -49,4 +48,16 @@
 .datePicker{
     border: 1px solid gray;
     border-radius: 10px;
+}
+
+@media screen and (max-width:980px){
+    .mainSection{
+        flex-direction: column;
+    }
+}
+@media  screen and (max-width:500px) {
+    .upper{
+        flex-direction: column;
+        justify-content: space-between;
+    }
 }

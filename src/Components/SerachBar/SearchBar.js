@@ -33,14 +33,20 @@ const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityI
 
 
   return (
-    <div>
+    <div style={
+      {
+        width:"100%",
+        display:'flex',
+        justifyContent:'center'
+      }
+    }>
       <form className="searchBar m-3" onSubmit={handleSubmit}>
         <div className="searchbar_wrapper">
           <div className="upperSection">
             Search Your Flight Here
           </div>
           <div className="mainSection">
-            <div className="upper">
+            <div className="ml-2 upper">
               <div className="from-dropdown m-3 ">
                 <select className='dropdown_menu bg-light ' value={cityIdSelected} onChange={handleFromCityChange} >
                   {citiesOptionList}
@@ -54,8 +60,7 @@ const SearchBar = ({cityIdSelected,setcityIdSelected,toCityIdSelected,settoCityI
               </div>
             </div>
             <div >
-              {/* <DatePicker /> */}
-              <input className='p-3 dropdown_menu bg-light' value={date} type="date"  onChange={handleDate} />
+              <input className='p-3 dropdown_menu bg-light m-3' value={date} type="date"  onChange={handleDate} />
             </div>
             <div className="ClassType">
               <select className='dropdown_menu bg-light' >
